@@ -1,0 +1,13 @@
+@charset "utf-8";
+@mixin common($h,$color:red){
+    width:30px;
+    height:$h;
+    background:$color;
+    
+}
+#nav{
+    @include common(30px);
+}
+@for $i from 1 to 3{
+    .item-#{$i}{width:2px * $i}
+}
